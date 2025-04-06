@@ -1,5 +1,6 @@
 import os
 import gdown
+import cloudpickle
 import joblib
 import streamlit as st
 import pandas as pd
@@ -16,7 +17,8 @@ if not os.path.exists("rsf_model.pkl"):
 if not os.path.exists("model_features.pkl"):
     gdown.download(features_url, "model_features.pkl", quiet=False)
 
-rsf = joblib.load("rsf_model.pkl")
+with open("rsf_model.pkl", "rb") as f:
+    rsf = cloudpickle.load(f)
 model_features = joblib.load("model_features.pkl")
 
 st.title("🧠 Riesgo Cardiovascular a 5 Años en Pacientes con VIH")
