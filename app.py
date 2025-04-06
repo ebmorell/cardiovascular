@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 🔗 DESCARGAR MODELO Y VARIABLES DESDE GOOGLE DRIVE
-model_url = ""https://drive.google.com/uc?id=1eO3KBHMjxtXUVOdtDY-Z2z8kAH3MEgeH""
+model_url = "https://drive.google.com/uc?id=1eO3KBHMjxtXUVOdtDY-Z2z8kAH3MEgeH"
 features_url = "https://drive.google.com/uc?id=1J14Tgotjiszcmu5ovY4N4Rsh911nluyz"
 
 if not os.path.exists("rsf_model.pkl"):
